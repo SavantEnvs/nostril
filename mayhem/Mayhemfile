@@ -1,0 +1,10 @@
+# Mayhem target: nostril nonsense-string detector (Atheris/libFuzzer harness).
+# The cmd binary is the compiled ELF launcher that drives mayhem/nonsense_fuzz.py; Atheris
+# instruments the nostril package so the run records coverage (edges).
+# origin: https://app.mayhem.security/mayhemheroes/nostril/nonsense-fuzz/4
+project: savantenvs/nostril
+target: nonsense-fuzz-buggy-mhh-run-4
+
+cmds:
+  - cmd: /mayhem/nonsense_fuzz
+    libfuzzer: true
